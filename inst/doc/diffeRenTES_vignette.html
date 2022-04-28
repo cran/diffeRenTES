@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="date" content="2022-04-26" />
+
+<title>Getting started</title>
+
+<script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="data:text/css,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Getting started</h1>
+<h4 class="date">2022-04-26</h4>
+
+
+
+<div id="what-is-differentes" class="section level2">
+<h2>What is <code>diffeRenTES</code>?</h2>
+<p><em>diffeRenTES</em> is a small package written in R that focuses primarily on the computation of the tree-like structure describing the cell differentiation process following the mathematical model firstly described in the work <span class="citation">(<a href="#ref-serra" role="doc-biblioref">Villani, Barbieri, and Serra 2011</a>)</span>.</p>
+</div>
+<div id="how-can-you-install-it" class="section level2">
+<h2>How can you install it?</h2>
+<p>To install the latest development version of <code>diffeRenTES</code> directly from <a href="https://github.com/mbraccini/diffeRenTES">GitHub</a> use:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;mbraccini/diffeRenTES&quot;</span>)</span></code></pre></div>
+</div>
+<div id="how-can-it-be-used" class="section level2">
+<h2>How can it be used?</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(diffeRenTES)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BoolNet)</span></code></pre></div>
+<p>For example purposes a random Boolean network using the <em>BoolNet</em> R package is generated. In real world application any Boolean network can be generated or loaded (e.g., by using the <em>loadNetwork</em> method of the BoolNet package), as long as it is stored in an object of class <em>BooleanNetwork</em>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>net <span class="ot">&lt;-</span> BoolNet<span class="sc">::</span><span class="fu">generateRandomNKNetwork</span>(<span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>attractors <span class="ot">&lt;-</span> BoolNet<span class="sc">::</span><span class="fu">getAttractors</span>(net) </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Attractors Transition Matrix computation</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ATM <span class="ot">&lt;-</span> <span class="fu">getATM</span>(net, attractors, <span class="at">MAX_STEPS_TO_FIND_ATTRACTORS =</span> <span class="dv">100</span>) </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ATM structure in matrix format.</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># a1, a2, etc. refer to the attractors found.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ATM<span class="sc">$</span>ATM)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      a1  a2   a3  a4   a5   a6</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a1 0.30 0.0 0.00 0.1 0.00 0.60</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a2 0.10 0.4 0.10 0.0 0.00 0.40</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a3 0.10 0.1 0.40 0.0 0.00 0.40</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a4 0.10 0.0 0.00 0.3 0.00 0.60</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a5 0.15 0.0 0.00 0.0 0.45 0.40</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; a6 0.13 0.0 0.03 0.0 0.00 0.83</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># No. perturbations that have not reach another attractor within the provided MAX_STEPS_TO_FIND_ATTRACTORS</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ATM<span class="sc">$</span>lostFLips)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0</span></span></code></pre></div>
+<p>Then, the Threshold Ergodic Sets (TESs) are computed, which, remember, represent the different cell types in this model.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#TESs computation</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>TESs <span class="ot">&lt;-</span> <span class="fu">getTESs</span>(ATM) </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Retrieve the computed TESs</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(TESs<span class="sc">$</span>TES)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_0</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_0$TES_1</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a1&quot; &quot;a2&quot; &quot;a3&quot; &quot;a4&quot; &quot;a6&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_1</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_1$TES_2</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a1&quot; &quot;a4&quot; &quot;a6&quot;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_2</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_2$TES_3</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a1&quot; &quot;a6&quot;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_3</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_3$TES_4</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_4</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_4$TES_5</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_5</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_5$TES_6</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_6</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_6$TES_7</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a2&quot;</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_6$TES_8</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a3&quot;</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_6$TES_9</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a5&quot;</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_6$TES_10</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_7</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_7$TES_11</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a2&quot;</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_7$TES_12</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a3&quot;</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_7$TES_13</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a5&quot;</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_7$TES_14</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_15</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a1&quot;</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_16</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a2&quot;</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_17</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a3&quot;</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_18</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a4&quot;</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_19</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a5&quot;</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_8$TES_20</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9</span></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_21</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a1&quot;</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_22</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a2&quot;</span></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_23</span></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a3&quot;</span></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_24</span></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a4&quot;</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_25</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a5&quot;</span></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $level_9$TES_26</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a6&quot;</span></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="co">#And the noise thresholds at which they emerge.</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(TESs<span class="sc">$</span>thresholds)</span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 0.00 0.03 0.10 0.13 0.15 0.30 0.40 0.45 0.60 0.83</span></span></code></pre></div>
+<p>Lastly, the following code saves the image of the computed differentiation tree to the file system.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving the TES-based differentiation tree into a file</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">saveDifferentiationTreeToFile</span>(TESs, <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;example.svg&quot;</span>)) </span></code></pre></div>
+<p>The resulting differentiation tree is presented. It reports the various TESs with the attractors of which they are composed and the differentiation process emerging from the reduction of intra-cellular noise, synthesized by the thresholds present in the direct arcs. <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8IS0tIEdlbmVyYXRlZCBieSBncmFwaHZpeiB2ZXJzaW9uIDIuMzguMCAoMjAxNDA0MTMuMjA0MSkKIC0tPgo8IS0tIFRpdGxlOiBkaWZmVHJlZSBQYWdlczogMSAtLT4KPHN2ZyB3aWR0aD0iNjI2cHQiIGhlaWdodD0iOTYwcHQiCiB2aWV3Qm94PSIwLjAwIDAuMDAgNjI1LjUyIDk1OS44OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJhbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCA5NTUuODgyKSI+Cjx0aXRsZT5kaWZmVHJlZTwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9IndoaXRlIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iLTQsNCAtNCwtOTU1Ljg4MiA2MjEuNTIzLC05NTUuODgyIDYyMS41MjMsNCAtNCw0Ii8+CjwhLS0gVEVTXzEgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIzNjEuNzYxIiBjeT0iLTkyMi40NjYiIHJ4PSI5MC40MDQiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM2MS43NjEiIHk9Ii05MjYuNjY2IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18xPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNjEuNzYxIiB5PSItOTA5Ljg2NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTEsYTIsYTMsYTQsYTY8L3RleHQ+CjwvZz4KPCEtLSBURVNfMiAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+PHRpdGxlPlRFU18yPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjI1NS43NjEiIGN5PSItODEwLjgzNSIgcng9IjY2LjYyNzYiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1NS43NjEiIHk9Ii04MTUuMDM1IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18yPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyNTUuNzYxIiB5PSItNzk4LjIzNSIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTEsYTQsYTY8L3RleHQ+CjwvZz4KPCEtLSBURVNfMSYjNDU7Jmd0O1RFU18yIC0tPgo8ZyBpZD0iZWRnZTEiIGNsYXNzPSJlZGdlIj48dGl0bGU+VEVTXzEmIzQ1OyZndDtURVNfMjwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0zMzUuMjg2LC04OTQuMDg0QzMyMS4wNTgsLTg3OS4zNjggMzAzLjM5MywtODYxLjA5OCAyODguMzI5LC04NDUuNTE4Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjI5MC42MzYsLTg0Mi44NjkgMjgxLjE2OSwtODM4LjExMyAyODUuNjA0LC04NDcuNzM1IDI5MC42MzYsLTg0Mi44NjkiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzI4LjAxMSIgeT0iLTg2Mi40NSIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjAzPC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzcgLS0+CjxnIGlkPSJub2RlNyIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfNzwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIzNjEuNzYxIiBjeT0iLTI1Mi42NzgiIHJ4PSI0Mi44NTE3IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNjEuNzYxIiB5PSItMjU2Ljg3OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfNzwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzYxLjc2MSIgeT0iLTI0MC4wNzgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmEyPC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzEmIzQ1OyZndDtURVNfNyAtLT4KPGcgaWQ9ImVkZ2U2IiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU18xJiM0NTsmZ3Q7VEVTXzc8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImdyZXkiIHN0cm9rZS1kYXNoYXJyYXk9IjUsMiIgZD0iTTM2MS43NjEsLTg5Mi42MTNDMzYxLjc2MSwtODcwLjUwNCAzNjEuNzYxLC04MzkuMjQyIDM2MS43NjEsLTgxMS44MzUgMzYxLjc2MSwtODExLjgzNSAzNjEuNzYxLC04MTEuODM1IDM2MS43NjEsLTM2My4zMDkgMzYxLjc2MSwtMzM5Ljg2MyAzNjEuNzYxLC0zMTMuNTk2IDM2MS43NjEsLTI5Mi42NTIiLz4KPHBvbHlnb24gZmlsbD0iZ3JleSIgc3Ryb2tlPSJncmV5IiBwb2ludHM9IjM2NS4yNjEsLTI5Mi41MzEgMzYxLjc2MSwtMjgyLjUzMSAzNTguMjYxLC0yOTIuNTMxIDM2NS4yNjEsLTI5Mi41MzEiLz4KPC9nPgo8IS0tIFRFU184IC0tPgo8ZyBpZD0ibm9kZTgiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzg8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNDY2Ljc2MSIgY3k9Ii0yNTIuNjc4IiByeD0iNDIuODUxNyIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDY2Ljc2MSIgeT0iLTI1Ni44NzgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzg8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ2Ni43NjEiIHk9Ii0yNDAuMDc4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphMzwvdGV4dD4KPC9nPgo8IS0tIFRFU18xJiM0NTsmZ3Q7VEVTXzggLS0+CjxnIGlkPSJlZGdlNyIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfMSYjNDU7Jmd0O1RFU184PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJncmV5IiBzdHJva2UtZGFzaGFycmF5PSI1LDIiIGQ9Ik0zOTEuODcyLC04OTQuMzI5QzQxMS4yMjMsLTg3My44MTggNDMyLjc2MSwtODQzLjgwOCA0MzIuNzYxLC04MTEuODM1IDQzMi43NjEsLTgxMS44MzUgNDMyLjc2MSwtODExLjgzNSA0MzIuNzYxLC0zNjMuMzA5IDQzMi43NjEsLTMzOC4xOTMgNDQxLjAwMywtMzExLjIzNCA0NDkuMzcxLC0yOTAuMzM0Ii8+Cjxwb2x5Z29uIGZpbGw9ImdyZXkiIHN0cm9rZT0iZ3JleSIgcG9pbnRzPSI0NTIuNjksLTI5MS40NjggNDUzLjMyNCwtMjgwLjg5MiA0NDYuMjMzLC0yODguNzY1IDQ1Mi42OSwtMjkxLjQ2OCIvPgo8L2c+CjwhLS0gVEVTXzMgLS0+CjxnIGlkPSJub2RlMyIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMzwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIxNDkuNzYxIiBjeT0iLTY5OS4yMDMiIHJ4PSI1NC45OTA2IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxNDkuNzYxIiB5PSItNzAzLjQwMyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfMzwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMTQ5Ljc2MSIgeT0iLTY4Ni42MDMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmExLGE2PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzImIzQ1OyZndDtURVNfMyAtLT4KPGcgaWQ9ImVkZ2UyIiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU18yJiM0NTsmZ3Q7VEVTXzM8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMjMwLjM3MiwtNzgzLjU3NUMyMTUuODQ0LC03NjguNTUgMTk3LjQ3NywtNzQ5LjU1NCAxODEuOTQ2LC03MzMuNDkiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMTg0LjA0NSwtNzMwLjYyNyAxNzQuNTc4LC03MjUuODcgMTc5LjAxMywtNzM1LjQ5MiAxODQuMDQ1LC03MzAuNjI3Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIxOC41MTEiIHk9Ii03NTAuODE5IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuMTwvdGV4dD4KPC9nPgo8IS0tIFRFU18xOCAtLT4KPGcgaWQ9Im5vZGUxOCIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMTg8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iMjU1Ljc2MSIgY3k9Ii0yOS40MTU2IiByeD0iNDMuNTIzOSIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMjU1Ljc2MSIgeT0iLTMzLjYxNTYiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzE4PC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyNTUuNzYxIiB5PSItMTYuODE1NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTQ8L3RleHQ+CjwvZz4KPCEtLSBURVNfMiYjNDU7Jmd0O1RFU18xOCAtLT4KPGcgaWQ9ImVkZ2UxNiIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfMiYjNDU7Jmd0O1RFU18xODwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iZ3JleSIgc3Ryb2tlLWRhc2hhcnJheT0iNSwyIiBkPSJNMjU1Ljc2MSwtNzgwLjk4MUMyNTUuNzYxLC03NTguODczIDI1NS43NjEsLTcyNy42MTEgMjU1Ljc2MSwtNzAwLjIwMyAyNTUuNzYxLC03MDAuMjAzIDI1NS43NjEsLTcwMC4yMDMgMjU1Ljc2MSwtMTQwLjA0NyAyNTUuNzYxLC0xMTYuNiAyNTUuNzYxLC05MC4zMzMyIDI1NS43NjEsLTY5LjM4OTIiLz4KPHBvbHlnb24gZmlsbD0iZ3JleSIgc3Ryb2tlPSJncmV5IiBwb2ludHM9IjI1OS4yNjEsLTY5LjI2ODggMjU1Ljc2MSwtNTkuMjY4OCAyNTIuMjYxLC02OS4yNjg4IDI1OS4yNjEsLTY5LjI2ODgiLz4KPC9nPgo8IS0tIFRFU180IC0tPgo8ZyBpZD0ibm9kZTQiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzQ8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNzguNzYxMyIgY3k9Ii01ODcuNTcyIiByeD0iNDIuODUxNyIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNzguNzYxMyIgeT0iLTU5MS43NzIiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzQ8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijc4Ljc2MTMiIHk9Ii01NzQuOTcyIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphNjwvdGV4dD4KPC9nPgo8IS0tIFRFU18zJiM0NTsmZ3Q7VEVTXzQgLS0+CjxnIGlkPSJlZGdlMyIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfMyYjNDU7Jmd0O1RFU180PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTEyNi43MzYsLTY3Mi40NjNDMTIxLjM2OCwtNjY1LjkzIDExNS44NzcsLTY1OC43NzcgMTExLjI2MSwtNjUxLjc4OCAxMDUuNzA5LC02NDMuMzgxIDEwMC4zOTMsLTYzMy45MDcgOTUuNzI2OSwtNjI0LjkwMSIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI5OC43NDE5LC02MjMuMTA3IDkxLjExNywtNjE1Ljc1IDkyLjQ5MDQsLTYyNi4yNTYgOTguNzQxOSwtNjIzLjEwNyIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxMjQuMDExIiB5PSItNjM5LjE4OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjEzPC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzE1IC0tPgo8ZyBpZD0ibm9kZTE1IiBjbGFzcz0ibm9kZSI+PHRpdGxlPlRFU18xNTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIxNDkuNzYxIiBjeT0iLTI5LjQxNTYiIHJ4PSI0My41MjM5IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxNDkuNzYxIiB5PSItMzMuNjE1NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfMTU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjE0OS43NjEiIHk9Ii0xNi44MTU2IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphMTwvdGV4dD4KPC9nPgo8IS0tIFRFU18zJiM0NTsmZ3Q7VEVTXzE1IC0tPgo8ZyBpZD0iZWRnZTEzIiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU18zJiM0NTsmZ3Q7VEVTXzE1PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJncmV5IiBzdHJva2UtZGFzaGFycmF5PSI1LDIiIGQ9Ik0xNDkuNzYxLC02NjkuMzVDMTQ5Ljc2MSwtNjQ3LjI0MiAxNDkuNzYxLC02MTUuOTggMTQ5Ljc2MSwtNTg4LjU3MiAxNDkuNzYxLC01ODguNTcyIDE0OS43NjEsLTU4OC41NzIgMTQ5Ljc2MSwtMTQwLjA0NyAxNDkuNzYxLC0xMTYuNiAxNDkuNzYxLC05MC4zMzMyIDE0OS43NjEsLTY5LjM4OTIiLz4KPHBvbHlnb24gZmlsbD0iZ3JleSIgc3Ryb2tlPSJncmV5IiBwb2ludHM9IjE1My4yNjEsLTY5LjI2ODggMTQ5Ljc2MSwtNTkuMjY4OCAxNDYuMjYxLC02OS4yNjg4IDE1My4yNjEsLTY5LjI2ODgiLz4KPC9nPgo8IS0tIFRFU181IC0tPgo8ZyBpZD0ibm9kZTUiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzU8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNzguNzYxMyIgY3k9Ii00NzUuOTQxIiByeD0iNDIuODUxNyIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNzguNzYxMyIgeT0iLTQ4MC4xNDEiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijc4Ljc2MTMiIHk9Ii00NjMuMzQxIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphNjwvdGV4dD4KPC9nPgo8IS0tIFRFU180JiM0NTsmZ3Q7VEVTXzUgLS0+CjxnIGlkPSJlZGdlNCIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfNCYjNDU7Jmd0O1RFU181PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTc4Ljc2MTMsLTU1OC4wNTRDNzguNzYxMywtNTQ1LjIxMiA3OC43NjEzLC01MjkuODQ4IDc4Ljc2MTMsLTUxNS45NjEiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iODIuMjYxNCwtNTE1LjY5NyA3OC43NjEzLC01MDUuNjk3IDc1LjI2MTQsLTUxNS42OTcgODIuMjYxNCwtNTE1LjY5NyIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI5MS4wMTEzIiB5PSItNTI3LjU1NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjE1PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzYgLS0+CjxnIGlkPSJub2RlNiIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfNjwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSI3Ny43NjEzIiBjeT0iLTM2NC4zMDkiIHJ4PSI0Mi44NTE3IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3Ny43NjEzIiB5PSItMzY4LjUwOSIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfNjwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNzcuNzYxMyIgeT0iLTM1MS43MDkiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmE2PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzUmIzQ1OyZndDtURVNfNiAtLT4KPGcgaWQ9ImVkZ2U1IiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU181JiM0NTsmZ3Q7VEVTXzY8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNzguNTAxMiwtNDQ2LjQyM0M3OC4zODQsLTQzMy41ODEgNzguMjQzOSwtNDE4LjIxNiA3OC4xMTcyLC00MDQuMzMiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iODEuNjE0NywtNDA0LjAzMyA3OC4wMjM2LC0zOTQuMDY2IDc0LjYxNSwtNDA0LjA5NyA4MS42MTQ3LC00MDQuMDMzIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg3LjUxMTMiIHk9Ii00MTUuOTI1IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuMzwvdGV4dD4KPC9nPgo8IS0tIFRFU18xMCAtLT4KPGcgaWQ9Im5vZGUxMCIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMTA8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNzMuNzYxMyIgY3k9Ii0yNTIuNjc4IiByeD0iNDMuNTIzOSIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNzMuNzYxMyIgeT0iLTI1Ni44NzgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzEwPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3My43NjEzIiB5PSItMjQwLjA3OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTY8L3RleHQ+CjwvZz4KPCEtLSBURVNfNiYjNDU7Jmd0O1RFU18xMCAtLT4KPGcgaWQ9ImVkZ2U4IiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU182JiM0NTsmZ3Q7VEVTXzEwPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTc2LjcyMDgsLTMzNC43OTFDNzYuMjUyMiwtMzIxLjk1IDc1LjY5MTYsLTMwNi41ODUgNzUuMTg1LC0yOTIuNjk5Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9Ijc4LjY3MjksLTI5Mi4zIDc0LjgxMDUsLTI4Mi40MzQgNzEuNjc3NSwtMjkyLjU1NSA3OC42NzI5LC0yOTIuMyIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI4NS41MTEzIiB5PSItMzA0LjI5NCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjQ8L3RleHQ+CjwvZz4KPCEtLSBURVNfMTEgLS0+CjxnIGlkPSJub2RlMTEiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzExPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjM2MS43NjEiIGN5PSItMTQxLjA0NyIgcng9IjQzLjUyMzkiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM2MS43NjEiIHk9Ii0xNDUuMjQ3IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18xMTwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzYxLjc2MSIgeT0iLTEyOC40NDciIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmEyPC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzcmIzQ1OyZndDtURVNfMTEgLS0+CjxnIGlkPSJlZGdlOSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfNyYjNDU7Jmd0O1RFU18xMTwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0zNjEuNzYxLC0yMjMuMTZDMzYxLjc2MSwtMjEwLjMxOSAzNjEuNzYxLC0xOTQuOTU0IDM2MS43NjEsLTE4MS4wNjgiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMzY1LjI2MSwtMTgwLjgwMyAzNjEuNzYxLC0xNzAuODAzIDM1OC4yNjEsLTE4MC44MDMgMzY1LjI2MSwtMTgwLjgwMyIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNzQuMDExIiB5PSItMTkyLjY2MyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjQ1PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzEyIC0tPgo8ZyBpZD0ibm9kZTEyIiBjbGFzcz0ibm9kZSI+PHRpdGxlPlRFU18xMjwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSI0NjcuNzYxIiBjeT0iLTE0MS4wNDciIHJ4PSI0My41MjM5IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI0NjcuNzYxIiB5PSItMTQ1LjI0NyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfMTI8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ2Ny43NjEiIHk9Ii0xMjguNDQ3IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphMzwvdGV4dD4KPC9nPgo8IS0tIFRFU184JiM0NTsmZ3Q7VEVTXzEyIC0tPgo8ZyBpZD0iZWRnZTEwIiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU184JiM0NTsmZ3Q7VEVTXzEyPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTQ2Ny4wMjEsLTIyMy4xNkM0NjcuMTM5LC0yMTAuMzE5IDQ2Ny4yNzksLTE5NC45NTQgNDY3LjQwNSwtMTgxLjA2OCIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI0NzAuOTA4LC0xODAuODM1IDQ2Ny40OTksLTE3MC44MDMgNDYzLjkwOCwtMTgwLjc3MSA0NzAuOTA4LC0xODAuODM1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ4MC4wMTEiIHk9Ii0xOTIuNjYzIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuNDU8L3RleHQ+CjwvZz4KPCEtLSBURVNfOSAtLT4KPGcgaWQ9Im5vZGU5IiBjbGFzcz0ibm9kZSI+PHRpdGxlPlRFU185PC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjU3My43NjEiIGN5PSItMjUyLjY3OCIgcng9IjQyLjg1MTciIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjU3My43NjEiIHk9Ii0yNTYuODc4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU185PC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1NzMuNzYxIiB5PSItMjQwLjA3OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTU8L3RleHQ+CjwvZz4KPCEtLSBURVNfMTMgLS0+CjxnIGlkPSJub2RlMTMiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzEzPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjU3My43NjEiIGN5PSItMTQxLjA0NyIgcng9IjQzLjUyMzkiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjU3My43NjEiIHk9Ii0xNDUuMjQ3IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18xMzwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTczLjc2MSIgeT0iLTEyOC40NDciIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmE1PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzkmIzQ1OyZndDtURVNfMTMgLS0+CjxnIGlkPSJlZGdlMTEiIGNsYXNzPSJlZGdlIj48dGl0bGU+VEVTXzkmIzQ1OyZndDtURVNfMTM8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNTczLjc2MSwtMjIzLjE2QzU3My43NjEsLTIxMC4zMTkgNTczLjc2MSwtMTk0Ljk1NCA1NzMuNzYxLC0xODEuMDY4Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjU3Ny4yNjEsLTE4MC44MDMgNTczLjc2MSwtMTcwLjgwMyA1NzAuMjYxLC0xODAuODAzIDU3Ny4yNjEsLTE4MC44MDMiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTg2LjAxMSIgeT0iLTE5Mi42NjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+MC40NTwvdGV4dD4KPC9nPgo8IS0tIFRFU18xNCAtLT4KPGcgaWQ9Im5vZGUxNCIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMTQ8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNjAuNzYxMyIgY3k9Ii0xNDEuMDQ3IiByeD0iNDMuNTIzOSIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNjAuNzYxMyIgeT0iLTE0NS4yNDciIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzE0PC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI2MC43NjEzIiB5PSItMTI4LjQ0NyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTY8L3RleHQ+CjwvZz4KPCEtLSBURVNfMTAmIzQ1OyZndDtURVNfMTQgLS0+CjxnIGlkPSJlZGdlMTIiIGNsYXNzPSJlZGdlIj48dGl0bGU+VEVTXzEwJiM0NTsmZ3Q7VEVTXzE0PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTcwLjM3OTYsLTIyMy4xNkM2OC44NDQ5LC0yMTAuMjE4IDY3LjAwNjIsLTE5NC43MTIgNjUuMzQ5NSwtMTgwLjc0Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjY4Ljc3OTMsLTE3OS45NDEgNjQuMTI2LC0xNzAuNDIyIDYxLjgyOCwtMTgwLjc2NSA2OC43NzkzLC0xNzkuOTQxIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjgxLjAxMTMiIHk9Ii0xOTIuNjYzIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuNDU8L3RleHQ+CjwvZz4KPCEtLSBURVNfMTYgLS0+CjxnIGlkPSJub2RlMTYiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzE2PC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjM2MS43NjEiIGN5PSItMjkuNDE1NiIgcng9IjQzLjUyMzkiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM2MS43NjEiIHk9Ii0zMy42MTU2IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18xNjwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzYxLjc2MSIgeT0iLTE2LjgxNTYiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmEyPC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzExJiM0NTsmZ3Q7VEVTXzE2IC0tPgo8ZyBpZD0iZWRnZTE0IiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU18xMSYjNDU7Jmd0O1RFU18xNjwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0zNjEuNzYxLC0xMTEuNTI5QzM2MS43NjEsLTk4LjY4NzQgMzYxLjc2MSwtODMuMzIyNSAzNjEuNzYxLC02OS40MzYyIi8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjM2NS4yNjEsLTY5LjE3MTggMzYxLjc2MSwtNTkuMTcxOCAzNTguMjYxLC02OS4xNzE5IDM2NS4yNjEsLTY5LjE3MTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzcwLjUxMSIgeT0iLTgxLjAzMTMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+MC42PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzE3IC0tPgo8ZyBpZD0ibm9kZTE3IiBjbGFzcz0ibm9kZSI+PHRpdGxlPlRFU18xNzwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSI0NjcuNzYxIiBjeT0iLTI5LjQxNTYiIHJ4PSI0My41MjM5IiByeT0iMjkuMzMxNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI0NjcuNzYxIiB5PSItMzMuNjE1NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5URVNfMTc8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ2Ny43NjEiIHk9Ii0xNi44MTU2IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBhdHRyczphMzwvdGV4dD4KPC9nPgo8IS0tIFRFU18xMiYjNDU7Jmd0O1RFU18xNyAtLT4KPGcgaWQ9ImVkZ2UxNSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5URVNfMTImIzQ1OyZndDtURVNfMTc8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNDY3Ljc2MSwtMTExLjUyOUM0NjcuNzYxLC05OC42ODc0IDQ2Ny43NjEsLTgzLjMyMjUgNDY3Ljc2MSwtNjkuNDM2MiIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI0NzEuMjYxLC02OS4xNzE4IDQ2Ny43NjEsLTU5LjE3MTggNDY0LjI2MSwtNjkuMTcxOSA0NzEuMjYxLC02OS4xNzE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ3Ni41MTEiIHk9Ii04MS4wMzEzIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuNjwvdGV4dD4KPC9nPgo8IS0tIFRFU18xOSAtLT4KPGcgaWQ9Im5vZGUxOSIgY2xhc3M9Im5vZGUiPjx0aXRsZT5URVNfMTk8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBjeD0iNTczLjc2MSIgY3k9Ii0yOS40MTU2IiByeD0iNDMuNTIzOSIgcnk9IjI5LjMzMTUiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTczLjc2MSIgeT0iLTMzLjYxNTYiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VEVTXzE5PC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1NzMuNzYxIiB5PSItMTYuODE1NiIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4gYXR0cnM6YTU8L3RleHQ+CjwvZz4KPCEtLSBURVNfMTMmIzQ1OyZndDtURVNfMTkgLS0+CjxnIGlkPSJlZGdlMTciIGNsYXNzPSJlZGdlIj48dGl0bGU+VEVTXzEzJiM0NTsmZ3Q7VEVTXzE5PC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTU3My43NjEsLTExMS41MjlDNTczLjc2MSwtOTguNjg3NCA1NzMuNzYxLC04My4zMjI1IDU3My43NjEsLTY5LjQzNjIiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iNTc3LjI2MSwtNjkuMTcxOCA1NzMuNzYxLC01OS4xNzE4IDU3MC4yNjEsLTY5LjE3MTkgNTc3LjI2MSwtNjkuMTcxOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1ODIuNTExIiB5PSItODEuMDMxMyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj4wLjY8L3RleHQ+CjwvZz4KPCEtLSBURVNfMjAgLS0+CjxnIGlkPSJub2RlMjAiIGNsYXNzPSJub2RlIj48dGl0bGU+VEVTXzIwPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjQzLjc2MTMiIGN5PSItMjkuNDE1NiIgcng9IjQzLjUyMzkiIHJ5PSIyOS4zMzE1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQzLjc2MTMiIHk9Ii0zMy42MTU2IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlRFU18yMDwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDMuNzYxMyIgeT0iLTE2LjgxNTYiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+IGF0dHJzOmE2PC90ZXh0Pgo8L2c+CjwhLS0gVEVTXzE0JiM0NTsmZ3Q7VEVTXzIwIC0tPgo8ZyBpZD0iZWRnZTE4IiBjbGFzcz0iZWRnZSI+PHRpdGxlPlRFU18xNCYjNDU7Jmd0O1RFU18yMDwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik01Ni4zMzkxLC0xMTEuNTI5QzU0LjMxMjUsLTk4LjQ1OTQgNTEuODgwNiwtODIuNzc2MSA0OS42OTc1LC02OC42OTgiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iNTMuMTUyNCwtNjguMTM2NSA0OC4xNjEzLC01OC43OTEgNDYuMjM1MSwtNjkuMjA5MiA1My4xNTI0LC02OC4xMzY1Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjYyLjUxMTMiIHk9Ii04MS4wMzEzIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPjAuNjwvdGV4dD4KPC9nPgo8L2c+Cjwvc3ZnPgoK" alt="Differentiation Tree" /></p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-serra" class="csl-entry">
+Villani, Marco, Alessia Barbieri, and Roberto Serra. 2011. <span>“A Dynamical Model of Genetic Networks for Cell Differentiation.”</span> <em>PLOS ONE</em> 6 (3): 1–9. <a href="https://doi.org/10.1371/journal.pone.0017703">https://doi.org/10.1371/journal.pone.0017703</a>.
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
